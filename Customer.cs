@@ -51,10 +51,10 @@ namespace ACM.BL
         public static int InstanceCount { get; set; }
 
         /// <summary>
-        /// Validatest he customer data.
+        /// Validates the Customer data.
         /// </summary>
         /// <returns>
-        /// Boolean indicating whether the record is valid.
+        /// Boolean indicating whether the Customer record is valid.
         /// </returns>
         public bool Validate()
         {
@@ -67,10 +67,10 @@ namespace ACM.BL
         }
 
         /// <summary>
-        /// Saves the current customer.
+        /// Saves the current Customer data.
         /// </summary>
         /// <returns>
-        /// Boolean indicating whether the record was successfully saved.
+        /// Boolean indicating whether the Customer record was successfully saved.
         /// </returns>
         public bool Save()
         {
@@ -80,7 +80,7 @@ namespace ACM.BL
         }
 
         /// <summary>
-        /// Retrieve one customer.
+        /// Retrieve one Customer.
         /// </summary>
         /// <returns>
         /// A single Customer record.

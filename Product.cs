@@ -20,6 +20,12 @@ namespace ACM.BL
         public string ProductDescription { get; set; }
         public decimal? CurrentPrice { get; set; }
 
+        /// <summary>
+        /// Validates the Product data.
+        /// </summary>
+        /// <returns>
+        /// Boolean indicating whether the Product record is valid.
+        /// </returns>
         public bool Validate()
         {
             var isValid = true;
@@ -30,6 +36,12 @@ namespace ACM.BL
             return isValid;
         }
 
+        /// <summary>
+        /// Saves the current Product data.
+        /// </summary>
+        /// <returns>
+        /// Boolean indicating whether the Product record was successfully saved.
+        /// </returns>
         public bool Save()
         {
             //TODO: Code that saves the defined Product
@@ -37,6 +49,12 @@ namespace ACM.BL
             return true;
         }
 
+        /// <summary>
+        /// Retrieve one Product.
+        /// </summary>
+        /// <returns>
+        /// A single Product record.
+        /// </returns>
         public List<Product> Retrieve()
         {
             return new List<Product>();

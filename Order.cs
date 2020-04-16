@@ -18,6 +18,12 @@ namespace ACM.BL
         public int OrderId { get; private set; }
         public DateTimeOffset? OrderDate { get; set; }
 
+        /// <summary>
+        /// Validates the Order data.
+        /// </summary>
+        /// <returns>
+        /// Boolean indicating whether the Order record is valid.
+        /// </returns>
         public bool Validate()
         {
             var isValid = true;
@@ -27,6 +33,12 @@ namespace ACM.BL
             return isValid;
         }
 
+        /// <summary>
+        /// Saves the current Order data.
+        /// </summary>
+        /// <returns>
+        /// Boolean indicating whether the Order record was successfully saved.
+        /// </returns>
         public bool Save()
         {
             //TODO: Code that saves the defined Order
@@ -34,6 +46,12 @@ namespace ACM.BL
             return true;
         }
 
+        /// <summary>
+        /// Retrieve one Order.
+        /// </summary>
+        /// <returns>
+        /// A single Order record.
+        /// </returns>
         public List<Order> Retrieve()
         {
             return new List<Order>();

@@ -20,6 +20,12 @@ namespace ACM.BL
         public int Quantity { get; set; }
         public decimal? PurchasePrice { get; set; }
 
+        /// <summary>
+        /// Validates the OrderItem data.
+        /// </summary>
+        /// <returns>
+        /// Boolean indicating whether the OrderItem record is valid.
+        /// </returns>
         public bool Validate()
         {
             var isValid = true;
@@ -31,6 +37,12 @@ namespace ACM.BL
             return isValid;
         }
 
+        /// <summary>
+        /// Saves the current OrderItem data.
+        /// </summary>
+        /// <returns>
+        /// Boolean indicating whether the OrderItem record was successfully saved.
+        /// </returns>
         public bool Save()
         {
             //TODO: Code that saves the defined OrderItem
@@ -38,6 +50,12 @@ namespace ACM.BL
             return true;
         }
 
+        /// <summary>
+        /// Retrieve one OrderItem.
+        /// </summary>
+        /// <returns>
+        /// A single OrderItem record.
+        /// </returns>
         public List<Order> Retrieve()
         {
             return new List<Order>();
