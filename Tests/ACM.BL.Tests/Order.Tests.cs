@@ -9,6 +9,7 @@ namespace ACM.BL.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.Inconclusive();
         }
     }
 }
