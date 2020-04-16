@@ -8,25 +8,30 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public int CustomerId { get; private set; }
-        
-        public string EmailAddress { get; set; }
-
-        public string FirstName { get; set; }
-
-        private string _lastName;
-        public string LastName
+        public Customer()
         {
-            get
-            {
-                return _lastName;
-            }
-            set
-            {
-                _lastName = value;
-            }
+            //Default Constructor
+        }
+        public Customer(int customerId)
+        {
+            CustomerId = customerId;
         }
 
+        public int CustomerId { get; private set; }
+        public string EmailAddress { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        /// <summary>
+        /// Retrieve the formatted Full Name which is a combination of First & Last Names.
+        /// </summary>
+        /// <returns>
+        /// String "LastName, FirstName"
+        ///  or
+        /// String "LastName" if FirstName not present
+        ///  or
+        /// String "FirstName" if LastName not present
+        /// </returns>
         public string FullName { 
             get
             {
@@ -50,6 +55,9 @@ namespace ACM.BL
         /// <summary>
         /// Retrieve one customer.
         /// </summary>
+        /// <returns>
+        /// A single Customer record.
+        /// </returns>
         public Customer Retrieve(int customerId)
         {
             return new Customer();
@@ -58,6 +66,9 @@ namespace ACM.BL
         /// <summary>
         /// Retrieve all customers.
         /// </summary>
+        /// <returns>
+        /// A List of all Customer records.
+        /// </returns>
         public List<Customer> Retrieve()
         {
             //TODO: Code that retrieves all of the customers
@@ -68,6 +79,9 @@ namespace ACM.BL
         /// <summary>
         /// Retrieve all customers with unfulfilled orders.
         /// </summary>
+        /// <returns>
+        /// A List of all Customer records with unfulfilled orders.
+        /// </returns>
         public List<Customer> RetrieveWithOpenOrders()
         {
             //TODO: Code that retrieves all of the customers with unfulfilled orders
@@ -78,6 +92,9 @@ namespace ACM.BL
         /// <summary>
         /// Retrieve all customers in specified region.
         /// </summary>
+        /// <returns>
+        /// A List of all Customer records in the specified region.
+        /// </returns>
         public List<Customer> RetrieveInRegion(int regionId)
         {
             //TODO: Code that retrieves all of the customers in specified region
@@ -88,7 +105,9 @@ namespace ACM.BL
         /// <summary>
         /// Saves the current customer.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Boolean indicating whether the record was successfully saved.
+        /// </returns>
         public bool Save()
         {
             //TODO: Code that saves the defined customer
@@ -99,7 +118,9 @@ namespace ACM.BL
         /// <summary>
         /// Validatest he customer data.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Boolean indicating whether the record is valid.
+        /// </returns>
         public bool Validate()
         {
             var isValid = true;
