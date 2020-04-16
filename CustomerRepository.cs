@@ -31,13 +31,13 @@ namespace ACM.BL
         public Customer Retrieve(int customerId)
         {
             // Create the instance of the Customer class
-            // Pass int he requested id
+            // Pass in the requested id
             Customer customer = new Customer(customerId);
 
             // TODO: Code that retrieves the defined customer
 
             // Temporary hard-coded values to return a customer
-            if (customerId == 1)
+            if (customerId == -1)
             {
                 customer.EmailAddress = "fbaggins@hobbiton.me";
                 customer.FirstName = "Frodo";

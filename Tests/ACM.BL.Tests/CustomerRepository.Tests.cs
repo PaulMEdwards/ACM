@@ -11,7 +11,7 @@ namespace ACM.BL.Tests
         {
             //-- Arrange
             var customerRepository = new CustomerRepository();
-            var expected = new Customer(1)
+            var expected = new Customer(-1)
             {
                 EmailAddress = "fbaggins@hobbiton.me",
                 FirstName = "Frodo",
@@ -19,7 +19,7 @@ namespace ACM.BL.Tests
             };
 
             //-- Act
-            var actual = customerRepository.Retrieve(1);
+            var actual = customerRepository.Retrieve(-1);
 
             //-- Assert
             Assert.AreEqual(expected.CustomerId, actual.CustomerId);
