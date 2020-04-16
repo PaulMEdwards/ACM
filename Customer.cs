@@ -46,5 +46,68 @@ namespace ACM.BL
         }
 
         public static int InstanceCount { get; set; }
+
+        /// <summary>
+        /// Retrieve one customer.
+        /// </summary>
+        public Customer Retrieve(int customerId)
+        {
+            return new Customer();
+        }
+
+        /// <summary>
+        /// Retrieve all customers.
+        /// </summary>
+        public List<Customer> Retrieve()
+        {
+            //TODO: Code that retrieves all of the customers
+
+            return new List<Customer>();
+        }
+
+        /// <summary>
+        /// Retrieve all customers with unfulfilled orders.
+        /// </summary>
+        public List<Customer> RetrieveWithOpenOrders()
+        {
+            //TODO: Code that retrieves all of the customers with unfulfilled orders
+
+            return new List<Customer>();
+        }
+
+        /// <summary>
+        /// Retrieve all customers in specified region.
+        /// </summary>
+        public List<Customer> RetrieveInRegion(int regionId)
+        {
+            //TODO: Code that retrieves all of the customers in specified region
+
+            return new List<Customer>();
+        }
+
+        /// <summary>
+        /// Saves the current customer.
+        /// </summary>
+        /// <returns></returns>
+        public bool Save()
+        {
+            //TODO: Code that saves the defined customer
+
+            return true;
+        }
+
+        /// <summary>
+        /// Validatest he customer data.
+        /// </summary>
+        /// <returns></returns>
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        }
     }
 }
